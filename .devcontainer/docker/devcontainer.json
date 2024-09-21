@@ -3,6 +3,12 @@
     "context": "..",
     "dockerfile": "../Dockerfile"
   },
+  "workspaceMount": "",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "runArgs": [
+    "--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z",
+    "--network=host"
+  ],
   "customizations": {
     "vscode": {
       "extensions": [
